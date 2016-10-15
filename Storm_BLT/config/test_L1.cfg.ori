@@ -1,0 +1,10 @@
+#test_L1.cfg
+blt                      : 1
+ecid_t_cmd               : ecid
+pcie_lpbk_gen2_t_cmd     : pcie_gen2_ext_lpbk
+pdma_t_cmd               : pdma
+eth_tx2rx_10g_t_cmd      : eth_tx2rx_10g_xfi
+spi_t_cmd                : spi
+gfc_t_cmd                : gfc
+sdio_t_cmd               : sdio
+rtc_t_cmd                : rtc
