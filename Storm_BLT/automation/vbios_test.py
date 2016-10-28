@@ -24,11 +24,12 @@ def print_ecid(dut_process, t_cmd, FA_comments):
    time.sleep(2)
    dut_process.sendline(t_cmd)
    time.sleep(5)
-   ecid0,ecid1,ecid2,ecid3=ecid(logfile) 
-   #if ecid0=='0x00000000' or ecid0==int(0) or  ecid1=='0x00000000' or ecid1==int(0) or ecid2==int(0) or ecid2=='0x00000000' or ecid3=='0x00000000' or ecid3==int(0):
-      #print bcolors.FAIL + "INFO: THIS PART ISN'T EFUSED.  REJECTED!!!!" + bcolors.ENDC
-      #print('exiting...')
-      #vbios_system_exit(FA_comments)
+   ecid0,ecid1,ecid2,ecid3=ecid(logfile)
+   if efused_part == 'yes': 
+      if ecid0=='0x00000000' or ecid0==int(0) or  ecid1=='0x00000000' or ecid1==int(0) or ecid2==int(0) or ecid2=='0x00000000' or ecid3=='0x00000000' or ecid3==int(0):
+         print bcolors.FAIL + "INFO: THIS PART ISN'T EFUSED.  REJECTED!!!!" + bcolors.ENDC
+         print('exiting...')
+         vbios_system_exit(FA_comments)
 
 def pcie_gen3_ext_lpbk(dut_process, t_cmd, FA_comments):
    dut_process.sendline('\r')

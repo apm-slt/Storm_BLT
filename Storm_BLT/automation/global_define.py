@@ -62,8 +62,17 @@ test_cmd_map = {'1'                 : 'print "exit on fail"',
                }
 
 
-bench_map = {'55': 'test_L',
-             '56': 'test_L1'}
+bench_map = {'37': 'test_L',
+             '38': 'test_L',
+             '39': 'test_L',
+             '40': 'test_L',
+             '41': 'test_L',
+             '25': 'test_L1',
+             '26': 'test_L1',
+             '27': 'test_L1',
+             '28': 'test_L1',
+             '29': 'test_L1',
+             }
 
 
 test_sig_map = {'pcie_gen3_ext_lpbk':{'PASS': 'Iteration\s4\s<\sPASS\s>\sGen3\sx8',
@@ -227,3 +236,5 @@ eye_map = {'eye_vref_mcu0': 'eye --with_ecc --lvl vref --lvl_start 0x100 --lvl_e
            'eye_wrlvl_mcu3': 'eye --lvl wrlvl  --lvl_start 0x0 --lvl_end 0x800 --step 20 --mcu 3 -- --threads 8 --iterations 5 --memory 10M --test xor_rmw'
 } 
 
+#lowecase only. (example: 'yes' or 'no')
+efused_part = 'yes'
